@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+h1 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #667eea, 0 0 40px #667eea;
+    }
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #764ba2, 0 0 40px #764ba2, 0 0 50px #764ba2;
+    }
+}
+
+
+
+
+
+#popups-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.popup {
+    position: absolute;
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    pointer-events: auto;
+    animation: float 6s ease-in-out infinite;
+    max-width: 200px;
+    min-width: 150px;
+    cursor: move;
+    user-select: none;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(2deg);
+    }
+}
+
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.popup-title {
+    font-weight: bold;
+}
+
+.popup-close {
+    cursor: pointer;
+    padding: 0 5px;
+    border-radius: 3px;
+    transition: background 0.2s ease;
+}
+
+.popup-close:hover {
+    background: #f0f0f0;
+}
+
+.popup-content {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* 不同颜色的弹窗 */
+.popup-color-1 {
+    background: #ffecd2;
+    border-left: 4px solid #fcb69f;
+}
+
+.popup-color-2 {
+    background: #f0f4c3;
+    border-left: 4px solid #cddc39;
+}
+
+.popup-color-3 {
+    background: #e0f7fa;
+    border-left: 4px solid #00acc1;
+}
+
+.popup-color-4 {
+    background: #f3e5f5;
+    border-left: 4px solid #ce93d8;
+}
+
+.popup-color-5 {
+    background: #e8f5e8;
+    border-left: 4px solid #81c784;
+}
+
+.popup-color-6 {
+    background: #fff3e0;
+    border-left: 4px solid #ffb74d;
+}
+
+.popup-color-7 {
+    background: #e3f2fd;
+    border-left: 4px solid #64b5f6;
+}
+
+.popup-color-8 {
+    background: #ffebee;
+    border-left: 4px solid #ef5350;
+}
